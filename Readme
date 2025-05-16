@@ -20,7 +20,7 @@ Ce projet implémente un générateur automatique d'emploi du temps pour le dép
 Nous utilisons un modèle de programmation par contraintes avec une approche adaptative:
 1. Tentative de programmation stricte (chaque cours exactement une fois)
 2. Relâchement des contraintes si nécessaire (solution partielle)
-3. Analyse du problème et suggestions d'amélioration
+3. Puis generation d'un pdf qui contient les emploies de temps de chaque classe
 
 
 ## Structure des Données
