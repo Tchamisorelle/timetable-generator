@@ -1,0 +1,29 @@
+# Générateur d'Emploi du Temps Universitaire TCHAMI TAMEN SORELLE 20U2855
+
+## Description du Projet
+Ce projet implémente un générateur automatique d'emploi du temps pour le département d'informatique de l'Université de Yaoundé I. Le système utilise la programmation par contraintes avec Google OR-Tools pour trouver une solution optimale qui respecte toutes les contraintes spécifiées.
+
+## Contraintes du Problème
+1. **Conflits interdits** : Une classe ne peut pas être programmée à plusieurs endroits, pour plusieurs cours, ou avec plusieurs enseignants à la même période.
+2. **Fréquence** : Chaque cours doit être planifié exactement une fois par semaine pour chaque classe.
+3. **Cohérence** : Une classe ne peut pas avoir un cours qui ne fait pas partie de son programme.
+4. **Optimisation** : Maximiser les cours programmés le matin.
+
+## Périodes
+- p1: 07h00–09h55 (poids w1=5)
+- p2: 10h05–12h55 (poids w2=4)
+- p3: 13h05–15h55 (poids w3=3)
+- p4: 16h05–18h55 (poids w4=2)
+- p5: 19h05–21h55 (poids w5=1)
+
+## Approche
+Nous utilisons un modèle de programmation par contraintes avec une approche adaptative:
+1. Tentative de programmation stricte (chaque cours exactement une fois)
+2. Relâchement des contraintes si nécessaire (solution partielle)
+3. Analyse du problème et suggestions d'amélioration
+
+
+## Structure des Données
+- `subjects.json`: Contient les informations sur les cours, les classes et les enseignants
+- `rooms.json`: Contient les informations sur les salles disponibles
+
